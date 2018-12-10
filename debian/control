@@ -1,0 +1,31 @@
+Source: ruby-snorlax
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Utkarsh Gupta <guptautkarsh2102@gmail.com>
+Build-Depends: debhelper (>= 11~),
+               gem2deb,
+               ruby-rails (>> 4.1)
+Standards-Version: 4.2.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-snorlax.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-snorlax
+Homepage: https://github.com/loomio/snorlax
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-snorlax
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-rails (>> 4.1),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Snorlax is a flexible controller for Rails APIs
+ Snorlax is an opinionated, flexible, and well-RESTed gem
+ for building Rails APIs. It's designed to Do The Right Thing™
+ by default, but allow you to customize where necessary.
+ Snorlax is designed to provide a set of flexible API
+ endpoints for client side consumption. It uses side loading,
+ which means that all of the records returned are unnested
+ and easily available for consumption.
